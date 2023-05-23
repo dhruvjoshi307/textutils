@@ -47,7 +47,7 @@ export default function TextForm(props) {
     <>
       <div>
         <div className="mb-3">
-          <h1 className={`text-${props.mode==='light'?'dark':'light'}`}>{props.heading}</h1>
+          <h1 className={`text-${props.mode==='light'?'dark':'light'}`} style={{marginTop:'3px'}}>{props.heading}</h1>
           <textarea
             className={`form-control bg-transparent text-${props.mode==='light'?'dark':'light'}`}
             value={text}
@@ -75,7 +75,7 @@ export default function TextForm(props) {
         <div className="mt-4">
           <h3 id="txt_summury"className={`text-${props.mode==='light'?'dark':'light'}`}> <strong>Text Summury</strong> </h3>
           <p className={`text-${props.mode==='light'?'dark':'light'}`}>
-          {text.split(" ").filter((element)=>{return element.length!==0}).length}<strong> Words &</strong> {text.length} <strong>Characters</strong> 
+          {text.split(/\s+/).filter((element)=>{return element.length!==0}).length}<strong> Words &</strong> {text.length} <strong>Characters</strong> 
           </p>
           <h3 id="txt_preview" className={`mt-3 text-${props.mode==='light'?'dark':'light'}`}> <strong>Preview</strong></h3>
           <div className="col-8">
