@@ -8,7 +8,7 @@ export default function Navbar(props) {
       <div className="container-fluid">
 
         <a  id='navtitle' className="navbar-brand" href="https://dhruvjoshi307.github.io/textutils">
-
+    
           {props.title}
         </a>
         <button
