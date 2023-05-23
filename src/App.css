@@ -2,11 +2,18 @@
   text-align: center;
 }
 
+#txt_summury{
+  text-align: center;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
+@media (max-width: 500px) { 
+  #copy_case{
+    visibility: hidden;
+  }
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
