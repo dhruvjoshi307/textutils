@@ -27,11 +27,11 @@ export default function Navbar(props) {
                 Home
               </a>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <a className="nav-link" href="/">
                 {props.aboutText}
               </a>
-            </li>
+            </li> */}
           </ul>
           <div className="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
   <div className="btn-group me-2" role="group" aria-label="First group">
