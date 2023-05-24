@@ -65,7 +65,7 @@ export default function TextForm(props) {
           onClick={handleDownClick}
           id="lowercase"
         >
-          Lowercase
+          
         </button>
        v
         <button id="copy_case" className="btn btn-primary mx-1 mt-1" onClick={handleCopy} 
