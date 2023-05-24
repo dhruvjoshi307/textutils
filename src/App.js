@@ -5,8 +5,11 @@ import "./App.css";
 import React, { useState } from "react";
 import TextForm from "./components/TextForm";
 function App() {
+  // Enable Dark Mode and custom color themes
   const [mode, setMode] = useState('light');
+  // For Show the Different alerts After Proccesses
   const [alert, setalert] = useState(null);
+  // Method to Show Different alerts
   const showAlert = (message, type) => {
     setalert({
       msg: message,
@@ -16,6 +19,7 @@ function App() {
       setalert(null);
     }, 1500);
   };
+  // For Remove the Different classes from body to fix the custom colors
   const removeclasses=()=>{
     document.body.classList.remove('bg-light');
     document.body.classList.remove('bg-dark');
@@ -57,6 +61,8 @@ function App() {
       <Alert alert={alert} />
       <div className="container mt-5">
         <TextForm heading="Enter The Text" mode={mode} showAlert={showAlert} />
+        {/* About Component Here */}
+        {/* <About/> */}
       </div>
     </>
   );

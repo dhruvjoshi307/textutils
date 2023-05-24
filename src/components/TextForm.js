@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 export default function TextForm(props) {
- 
+//  Handle the uppercase buttons
   const handleUpClick = () => {
     console.log("Uppercase clicked" + text);
     let newText = text.toUpperCase();
     setText(newText);
     props.showAlert("Converted to Uppercase","success")
   };
-
+  //  Handle the lowercase buttons
   const handleDownClick = () => {
     console.log("Uppercase clicked" + text);
     let newText = text.toLowerCase();
@@ -16,7 +16,7 @@ export default function TextForm(props) {
     props.showAlert("Converted to Lowercase","success")
     
   };
-
+// handle the copy button
   const handleCopy = (e) => {
     console.log("I am copying...");
     let text = document.getElementById("mytext");
@@ -28,15 +28,7 @@ export default function TextForm(props) {
     navigator.clipboard.writeText(text.value);
     console.log(text.value);
   };
-  // function wordCount(str) {
-  //   let total = 0;
-  //   for (var i = 0; i < str.length; i++)
-  //     if (str(i) === " ") { // if a space is found in str
-  //       total = +1; // add 1 to total so far
-  //   }
-  //   total += 1; // add 1 to totalsoFar to account for extra space since 1 space = 2 words
-  //   return total;
-  // };
+//  Handle Onchange Function to write textarea contents
   const handleOnChange = (event) => {
     console.log("Onchange");
     setText(event.target.value);

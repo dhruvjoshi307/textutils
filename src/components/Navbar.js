@@ -8,7 +8,6 @@ export default function Navbar(props) {
       <div className="container-fluid">
 
         <a  id='navtitle' className="navbar-brand" href="https://dhruvjoshi307.github.io/textutils">
-    
           {props.title}
         </a>
         <button
@@ -29,6 +28,8 @@ export default function Navbar(props) {
                 Home
               </a>
             </li>
+            {/* About Component Here*/}
+
             {/* <li className="nav-item">
               <a className="nav-link" href="/">
                 {props.aboutText}
@@ -67,8 +68,10 @@ export default function Navbar(props) {
     </nav>
   );
 }
+//  TO fix the datatype of the props
 Navbar.prototype = {
   title: PropTypes.string.isRequired,
   aboutText: PropTypes.string.isRequired,
 };
+// To set the default props
 Navbar.defaultProps = { title: "set title", aboutText: "set about here" };

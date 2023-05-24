@@ -7,6 +7,7 @@ function Alert(props) {
   };
   return (
     <div style={{height:'75px'}}>
+      {/* props.alert && <= condition to show the alert */}
     {props.alert &&
       <div
         className={`alert alert-${props.alert.type} alert-dismissible fade in show mt-3`}
